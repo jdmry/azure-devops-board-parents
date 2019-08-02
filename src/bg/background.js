@@ -32,13 +32,15 @@ chrome.webRequest.onBeforeRequest.addListener((details) => {
 	postedString = JSON.parse(postedString);
 
 	if(details.url.indexOf("updateWorkItems") > 0) {
-		postData = JSON.parse(postedString.updatePackage)[0];
+		updateWorkItemPost = JSON.parse(postedString.updatePackage)[0];
 		setTimeout(() => {
-			sendMessage("load_parents", [postData.id.toString()]);
-		}, 1000);
+			console.log(updateWorkItemPost);
+			console.log(updateWorkItemPost.id);
+			sendMessage("load_parents", [updateWorkItemPost.id.toString()]);
+		}, 1500);
 	} else if(details.url.indexOf("customerintelligence") > 0) {
-		postData = postedString[0];
-		if(postData.feature === "WorkItem.Closed") {
+		customIntelPost = postedString[0];
+		if(customIntelPost.feature === "WorkItem.Closed") {
 			sendMessage("load_parents", []);
 		}
 	}

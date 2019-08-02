@@ -1,6 +1,6 @@
 {
     "name": "Parents for Azure Devops Boards",
-    "version": "1.0",
+    "version": "1.0.0",
     "description": "Display work item parent item in the Azure Devops Board",
     "permissions": [
         "https://dev.azure.com/",

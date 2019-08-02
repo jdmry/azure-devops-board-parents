@@ -7,7 +7,7 @@ Fetch and display the parent of each item in Azure Devops Boards
 
 ## How to use
  - I have a problem with CRX exe file so for now please do that
-   - Clone the repository
+   - Clone/Download the repository
    - Go to your chrome extensions page
    - Activate developer mode
    - Click load unpacked extension

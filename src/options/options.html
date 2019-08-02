@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parents for Azure Devops Boards</title>
+    <style>
+        body {
+            padding: 50px;
+        }
+        input {
+            width: 500px;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+        button {
+            width: 100px;
+            height: 30px;
+            cursor: pointer;
+            display: block;
+        }
+        #status {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Azure Devops Credentials</h2>
+    Username: <input type="text" id="username" placeholder="your email address"/>
+    <br />
+    Personal Access Token: <input type="password" id="token" />
+    <br />
+    <i>Can be generated <a target="_blank" href="https://dev.azure.com/asos/_usersSettings/tokens">here</a> and needs to be able to read work items.</i>
+
+    <br />
+    <br />
+    <div id="status"></div>
+    <button id="save">Save</button>
+
+    <script src="../../js/jquery-3.4.1.min.js"></script>
+    <script src="options.js"></script>
+
+</body>
+</html>

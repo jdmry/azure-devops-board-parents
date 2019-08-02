@@ -1,0 +1,35 @@
+{
+    "name": "Parents for Azure Devops Boards",
+    "version": "1.0",
+    "description": "Display work item parent item in the Azure Devops Board",
+    "permissions": [
+        "https://dev.azure.com/",
+        "storage",
+        "activeTab",
+        "webRequest"
+    ],
+    "background": {
+        "scripts": [
+            "src/bg/background.js",
+            "js/jquery-3.4.1.min.js"
+        ],
+        "persistent": true
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://dev.azure.com/*/*/_boards/board/t/*"
+        ],
+        "js": [
+            "src/inject/inject.js",
+            "js/jquery-3.4.1.min.js"
+        ]
+    }],
+    "browser_action": {
+        "default_title": "Bring Parents!"
+    },
+    "options_ui": {
+        "page": "src/options/options.html",
+        "open_in_tab": false
+    },
+    "manifest_version": 2
+}

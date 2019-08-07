@@ -42,18 +42,23 @@ let showParents = (data) => {
 }
 
 let getWIColor = (type) => {
-	return (type === 'Feature') ? "#9b5ab9" : "#f58924";
+	return (type === 'Feature') ? "#b070ce" : "#f58924";
+}
+
+let getWIIcon = (type) => {
+	return (type === 'Feature') ? "trophy" : "crown";
 }
 
 let renderParents = (data) => {
 	clearParents(data);
 	wiColor = getWIColor(data[0].parentType);
+	wiIcon = getWIIcon(data[0].parentType);
 	$.each(data, (index, value) => {
 		let idElem = $("div.id:contains("+value.childId+")");
 		let titleElem = idElem.closest("div.id-title-container");
 		let parentElem = $("<div data-parent='"+value.parentId+"'></div>")
-			.html("<a target='_blank' style='color: "+wiColor+" !important' href='"+DEVOPS_URL_EDIT+value.parentId+"'>"+value.parentName+"</a>")
-			.css({"display": "none", "margin": "8px", "padding": "4px", "border-left": "4px solid "+wiColor});
+			.html("<a target='_blank' style='color: "+wiColor+" !important' href='"+DEVOPS_URL_EDIT+value.parentId+"'><i class='fas fa-"+wiIcon+"'></i> <strong>"+value.parentId+"</strong> "+value.parentName+"</a>")
+			.css({"display": "none", "margin": "8px", "padding": "5px", "border-bottom": "1px solid #605E5C", "border-top": "1px solid #605E5C", "border-right": "1px solid #605E5C", "border-left": "4px solid "+wiColor});
 		titleElem.after(parentElem);
 	});
 	showParents(data);

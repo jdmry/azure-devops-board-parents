@@ -20,6 +20,7 @@
             "https://dev.azure.com/*/*/_boards/board/t/*"
         ],
         "js": [
+            "src/inject/fa.js",
             "src/inject/inject.js",
             "js/jquery-3.4.1.min.js"
         ]

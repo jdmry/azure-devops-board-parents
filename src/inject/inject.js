@@ -118,7 +118,7 @@ let fetchParentData = (data) => {
 			generateParentsDataForRendering(data, wiWithParents);
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
-			alert('Unexpected Error');
+			console.log(errorThrown);
 			chrome.runtime.sendMessage({message: "parents_loaded"}, (response) => {});
 		}
 	});
@@ -146,7 +146,7 @@ let fetchWIData = (idsToFetch) => {
 			fetchParentData(data);
 		},
 		error: function (jqXHR, textStatus, errorThrown) {
-			alert('Unexpected Error');
+			console.log(errorThrown);
 			chrome.runtime.sendMessage({message: "parents_loaded"}, (response) => {});
 		}
 	});

@@ -34,8 +34,6 @@ chrome.webRequest.onBeforeRequest.addListener((details) => {
 	if(details.url.indexOf("updateWorkItems") > 0) {
 		updateWorkItemPost = JSON.parse(postedString.updatePackage)[0];
 		setTimeout(() => {
-			console.log(updateWorkItemPost);
-			console.log(updateWorkItemPost.id);
 			sendMessage("load_parents", [updateWorkItemPost.id.toString()]);
 		}, 1500);
 	} else if(details.url.indexOf("customerintelligence") > 0) {

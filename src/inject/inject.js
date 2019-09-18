@@ -42,7 +42,7 @@ let showParents = (data) => {
 }
 
 let getWIColor = (type) => {
-	return (type === 'Feature') ? "#b070ce" : "#f58924";
+	return (type === 'Feature') ? "#773b93" : "#f58924";
 }
 
 let getWIIcon = (type) => {

@@ -42,18 +42,38 @@ let showParents = (data) => {
 }
 
 let getWIColor = (type) => {
-	return (type === 'Feature') ? "#b070ce" : "#f58924";
+	switch (type) {
+		case "Feature": return "#b070ce";
+		case "Epic": return "#f58924";
+		case "Investigation": return "#339947";
+		case "User Story": return "#009CCC";
+		case "Enabler": return "#EC008C";
+		case "Incident": return "#E60017";
+		case "Problem": return "#E60017";
+		case "Improvement": return "#339947";
+		default: return "#155592";
+	}
 }
 
 let getWIIcon = (type) => {
-	return (type === 'Feature') ? "trophy" : "crown";
+	switch (type) {
+		case "Feature": return "trophy";
+		case "Epic": return "crown";
+		case "Investigation": return "question-circle";
+		case "User Story": return "book-open";
+		case "Enabler": return "cog";
+		case "Incident": return "fire";
+		case "Problem": return "bug";
+		case "Improvement": return "chart-line";
+		default: return "undo-alt";
+	}
 }
 
 let renderParents = (data) => {
 	clearParents(data);
-	wiColor = getWIColor(data[0].parentType);
-	wiIcon = getWIIcon(data[0].parentType);
 	$.each(data, (index, value) => {
+		wiColor = getWIColor(value.parentType);
+		wiIcon = getWIIcon(value.parentType);
 		let idElem = $("div.id:contains("+value.childId+")");
 		let titleElem = idElem.closest("div.id-title-container");
 		let parentElem = $("<div data-parent='"+value.parentId+"'></div>")

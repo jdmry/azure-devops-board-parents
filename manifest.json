@@ -1,6 +1,6 @@
 {
     "name": "Parents for Azure Devops Boards",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Display work item parent item in the Azure Devops Board",
     "permissions": [
         "https://dev.azure.com/",
@@ -17,7 +17,8 @@
     },
     "content_scripts": [{
         "matches": [
-            "https://dev.azure.com/*/*/_boards/board/t/*"
+            "https://dev.azure.com/*/*/_boards/board/t/*",
+            "https://dev.azure.com/*/*/_sprints/taskboard/*"
         ],
         "js": [
             "src/inject/fa.js",

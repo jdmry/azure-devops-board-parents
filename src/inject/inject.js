@@ -43,7 +43,7 @@ let showParents = (data) => {
 
 let getWIColor = (type) => {
 	switch (type) {
-		case "Feature": return "#b070ce";
+		case "Feature": return "#773b93";
 		case "Epic": return "#f58924";
 		case "Investigation": return "#339947";
 		case "User Story": return "#009CCC";

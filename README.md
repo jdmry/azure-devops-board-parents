@@ -1,6 +1,8 @@
 # azure-devops-board-parents
 ![logo](icons/icon128.png)
-Fetch and display the parent of each item in Azure Devops Boards
+
+Fetch and display the parent of each item and also the remainings in Azure Devops Boards.
+
 You can find it on the store here for easy install https://chrome.google.com/webstore/detail/parents-for-azure-devops/fbdbipdlfojffkpopckfpohmaiabglad
 
 ## Pre-requisites

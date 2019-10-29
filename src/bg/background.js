@@ -16,12 +16,16 @@ chrome.browserAction.onClicked.addListener(() => {
 });
 
 chrome.runtime.onMessage.addListener((request, sender) => {
-	if(request.message === "loading_parents")
-		setLoadingState(true);
-	else if(request.message === "parents_loaded") {
-		setLoadingState(false);
-		extensionLoaded = true;
+	switch(request.message) {
+		case "loading":
+			setLoadingState(true);
+			break;
+		case "loaded":
+			setLoadingState(false);
+			extensionLoaded = true;
+			break;
 	}
+	return true;
 });
 
 chrome.webRequest.onBeforeRequest.addListener((details) => {

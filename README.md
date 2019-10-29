@@ -6,16 +6,12 @@ Fetch and display the parent of each item in Azure Devops Boards
  - In your board display settings, choose to display the ID of the work item on the card
  - Use the new azure devops url pattern (eg. https://dev.azure.com/org/....)
 
-## How to use
- - I have a problem with CRX exe file so for now please do that
-   - Clone/Download the repository
-   - Go to your chrome extensions page
-   - Activate developer mode
-   - Click load unpacked extension
-   - Select the folder of the project you've cloned
- - Go to the settings of the extension (right click -> options on the extension icon) and fill-in the 2 required fields.
-   - Your email address
-   - Your token (link to generate it is provided) that needs just read access to work items
+## How to use for development
+ - Clone/Download the repository
+ - Go to your chrome extensions page
+ - Activate developer mode
+ - Click load unpacked extension
+ - Select the folder of the project you've cloned
  - Refresh the board page and click on the extension icon
  - If anything goes wrong at any time or it doesn't work, please just refresh the page and re-click on the extension icon
 

@@ -1,6 +1,7 @@
 # azure-devops-board-parents
 ![logo](icons/icon128.png)
 Fetch and display the parent of each item in Azure Devops Boards
+You can find it on the store here for easy install https://chrome.google.com/webstore/detail/parents-for-azure-devops/fbdbipdlfojffkpopckfpohmaiabglad
 
 ## Pre-requisites
  - In your board display settings, choose to display the ID of the work item on the card
